@@ -1,0 +1,35 @@
+*Patient Service:
+- addPatient(patient p);
+- updatePatient(patient p);
+- deletePatient(Long id) //if don't have any Sample
+
+*Sample Service :
+- addSample(Sample p) //need id patient
+- updateSample(Sample p)
+- getSampleById(Long id)
+
+Service Analysis:
+- addAnalysis(Analysis a)
+- getAnalysisWaitingOrAnalyzing(Long id)
+- getResultAnalysisById(Long id)
+- getAllAnalysisByIdPatient(Long id)
+
+*Service Reagent:
+- addReagent(reagent r)
+- updateReagent(reagent r)
+- notificationLowStock()
+
+*Service User:
+- addUser(user u)
+- updateUser(user u)
+
+Service Planning:
+- scheduleAnalysis(Long idAnalysis)
+
+Service Rapports:
+- performanceRapport(TypeAnalysis ta,periodeRange pr,startDate sd,endDate ed)
+
+Service Resultat:
+- getResultatAnalysis(analysis a)
+	
+

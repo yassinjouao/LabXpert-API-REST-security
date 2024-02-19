@@ -1,0 +1,29 @@
+//	@Test
+//	public void testUpdatePatientService() throws NotFoundException, IllegalAccessException {
+//		Long patientId = 1L;
+//		PatientDTO newPatientDTO = PatientDTO.builder().id(patientId).firstname("new").lastname("Patient1")
+//				.dateOfBirth(LocalDate.of(1990, 1, 1)).sex(Sex.MAN).phone("123456789").build();
+//		Patient newPatient = Patient.builder().id(patientId).firstname("new").lastname("Patient1")
+//				.dateOfBirth(LocalDate.of(1990, 1, 1)).sex(Sex.MAN).phone("123456789").build();
+//		PatientDTO oldPatientDTO = PatientDTO.builder().id(patientId).firstname("Old").lastname("Patient2")
+//				.dateOfBirth(LocalDate.of(1980, 1, 1)).sex(Sex.WOMAN).phone("987654321").build();
+//		Patient oldPatient = Patient.builder().id(patientId).firstname("Old").lastname("Patient2")
+//				.dateOfBirth(LocalDate.of(1980, 1, 1)).sex(Sex.WOMAN).phone("987654321").build();
+//
+//		when(patientRepository.save(any(Patient.class))).thenReturn(newPatient);
+//		when(patientMapper.fromPatientDTOToPatient(any())).thenReturn(oldPatient);
+//		when(patientMapper.fromPatientToPatientDTO(any())).thenReturn(newPatientDTO);
+//		Optional<Patient> optionalPatient = Optional.of(oldPatient);
+//		when(patientRepository.findById(1L)).thenReturn(optionalPatient);
+//		when(patientService.getPatientByIdService(patientId)).thenReturn(oldPatientDTO);
+//
+//		PatientDTO result = patientService.updatePatientService(patientId, newPatientDTO);
+//
+//		// Verify the interactions
+//		verify(patientRepository, times(1)).save(any());
+//		verify(patientMapper, times(1)).fromPatientDTOToPatient(newPatientDTO);
+//		verify(patientMapper, times(1)).fromPatientToPatientDTO(patientMapper.fromPatientDTOToPatient(oldPatientDTO));
+//		assertEquals(patientId, result.getId());
+//		assertNotEquals(oldPatientDTO.getFirstname(), result.getFirstname());
+//		assertNotEquals(oldPatientDTO.getLastname(), result.getLastname());
+//	}
