@@ -11,7 +11,7 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yassinjouao/LabXpert-Api-Rest-Spring-Boot.git
+   git clone git@github.com:yassinjouao/LabXpert-API-REST-security-App.git
    cd LabXpert-Api-Rest-Spring-Boot
 
 2 . **installation**
